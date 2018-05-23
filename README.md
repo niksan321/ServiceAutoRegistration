@@ -1,2 +1,32 @@
 # ServiceAutoRegistration
-Allows you to automatically register services in the DI container Asp.Net Core. Autoregistration occurs by searching for services in a given namespace.
+Allows you to automatically register services in the Asp.Net Core DI container. Autoregistration occurs by searching for services in a given namespace.
+
+### Two registration modes are supported
+* registration of all founded services by class
+* registration of all founded services by class and corresponding interfaces
+ 
+#### Registration by class and interfaces (default behavior)
+This code search for all classes in `Api.Services.Singleton` namespace and register its by executing `services.AddSingleton(IService, Service)` for all founded classes. And also search for all classes in `Api.Services` namespace and register its by executing `services.AddScoped(IService, Service)` for all founded classes.
+```sh
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AutoRegisterServices(options =>
+	{
+		options.Namespaces.Scoped = "Api.Services";
+		options.Namespaces.Singleton = "Api.Services.Singleton";
+	});
+}
+```
+
+#### Registration by class
+This code search for all classes in `Api.Services` namespace and register its by executing `services.AddScoped(Service)` for all founded classes.
+```sh
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AutoRegisterServices(options =>
+	{
+		options.Namespaces.Scoped = "Api.Services";
+		options.Provider = new ClassRegistrationProvider();
+	});
+}
+```
