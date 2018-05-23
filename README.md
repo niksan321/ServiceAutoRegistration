@@ -2,8 +2,8 @@
 Allows you to automatically register services in the Asp.Net Core DI container. Autoregistration occurs by searching for services in a given namespace.
 
 ### Installing
-You can use nuget to install package `Install-Package ServiceAutoRegistration`.
-Or you can use dotnet cli `dotnet add package ServiceAutoRegistration`.
+* You can use nuget to install package `Install-Package ServiceAutoRegistration`.
+* Or you can use dotnet cli `dotnet add package ServiceAutoRegistration`.
 
 ### Two registration modes are supported
 * registration of all founded services by class
