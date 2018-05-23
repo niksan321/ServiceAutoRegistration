@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Nikutin Andrey</Authors>
     <Company>Home</Company>
-    <Description>Allows you to automatically register services in the DI container Asp.Net Core. Autoregistration occurs by searching for services in a given namespace.</Description>
-    <PackageProjectUrl></PackageProjectUrl>
+    <Description>Allows you to automatically register services in the Asp.Net Core DI container. Autoregistration occurs by searching for services in a given namespace</Description>
+    <PackageProjectUrl>https://github.com/niksan321/ServiceAutoRegistration</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/niksan321/ServiceAutoRegistration/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/niksan321/ServiceAutoRegistration</RepositoryUrl>
     <PackageTags />
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
