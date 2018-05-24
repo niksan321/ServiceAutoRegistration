@@ -10,7 +10,12 @@
     <PackageLicenseUrl>https://github.com/niksan321/ServiceAutoRegistration/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/niksan321/ServiceAutoRegistration</RepositoryUrl>
     <PackageTags />
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <DocumentationFile>bin\Release\netstandard2.0\ServiceAutoRegistration.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
