@@ -10,7 +10,7 @@
     <PackageLicenseUrl>https://github.com/niksan321/ServiceAutoRegistration/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/niksan321/ServiceAutoRegistration</RepositoryUrl>
     <PackageTags />
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

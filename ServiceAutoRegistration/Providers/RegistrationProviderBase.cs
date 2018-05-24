@@ -29,10 +29,22 @@ namespace ServiceAutoRegistration.Providers
 
         protected List<Type> GetTypes(string @namespace)
         {
-            return Assembly.GetEntryAssembly()
-                           .GetTypes()
-                           .Where(t => t.Namespace != null && t.Namespace == @namespace)
-                           .ToList();
+            var types = Assembly.GetEntryAssembly()
+                                .GetTypes()
+                                .Where(t => t.Namespace != null);
+            switch (Namespaces.CompreType)
+            {
+                case NamespaceCompreType.Equal:
+                    return types.Where(t => t.Namespace == @namespace).ToList();
+                case NamespaceCompreType.Contain:
+                    return types.Where(t => t.Namespace.Contains(@namespace)).ToList();
+                case NamespaceCompreType.StartsWith:
+                    return types.Where(t => t.Namespace.StartsWith(@namespace)).ToList();
+                case NamespaceCompreType.EndsWith:
+                    return types.Where(t => t.Namespace.EndsWith(@namespace)).ToList();
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }

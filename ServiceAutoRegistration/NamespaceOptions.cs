@@ -17,6 +17,11 @@
         /// </summary>
         public string Singleton { get; set; }
 
+        /// <summary>
+        /// Defines how to compare namespaces. Default is "Equal"
+        /// </summary>
+        public NamespaceCompreType CompreType { get; set; } = NamespaceCompreType.Equal;
+
         public bool HasScoped => !string.IsNullOrWhiteSpace(Scoped);
         public bool HasTransient => !string.IsNullOrWhiteSpace(Transient);
         public bool HasSingleton => !string.IsNullOrWhiteSpace(Singleton);
