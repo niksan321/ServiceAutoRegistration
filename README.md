@@ -43,7 +43,7 @@ It can have the following meanings:
 * StartsWith
 * EndsWith
 
-This code registers all services that contain Services in the namespace.
+This code registers all services that contain `Services` in the namespace.
 ```sh
 public void ConfigureServices(IServiceCollection services)
 {
