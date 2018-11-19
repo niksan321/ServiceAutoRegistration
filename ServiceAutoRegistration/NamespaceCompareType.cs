@@ -1,6 +1,6 @@
 ﻿namespace ServiceAutoRegistration
 {
-    public enum NamespaceCompreType
+    public enum NamespaceCompareType
     {
         Equal,
         Contain,

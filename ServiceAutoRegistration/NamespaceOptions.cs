@@ -20,7 +20,7 @@
         /// <summary>
         /// Defines how to compare namespaces. Default is "Equal"
         /// </summary>
-        public NamespaceCompreType CompreType { get; set; } = NamespaceCompreType.Equal;
+        public NamespaceCompareType CompareType { get; set; } = NamespaceCompareType.Equal;
 
         public bool HasScoped => !string.IsNullOrWhiteSpace(Scoped);
         public bool HasTransient => !string.IsNullOrWhiteSpace(Transient);

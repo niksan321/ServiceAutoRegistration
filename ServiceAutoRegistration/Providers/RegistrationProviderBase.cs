@@ -32,15 +32,15 @@ namespace ServiceAutoRegistration.Providers
             var types = Assembly.GetEntryAssembly()
                                 .GetTypes()
                                 .Where(t => t.Namespace != null);
-            switch (Namespaces.CompreType)
+            switch (Namespaces.CompareType)
             {
-                case NamespaceCompreType.Equal:
+                case NamespaceCompareType.Equal:
                     return types.Where(t => t.Namespace == @namespace).ToList();
-                case NamespaceCompreType.Contain:
+                case NamespaceCompareType.Contain:
                     return types.Where(t => t.Namespace.Contains(@namespace)).ToList();
-                case NamespaceCompreType.StartsWith:
+                case NamespaceCompareType.StartsWith:
                     return types.Where(t => t.Namespace.StartsWith(@namespace)).ToList();
-                case NamespaceCompreType.EndsWith:
+                case NamespaceCompareType.EndsWith:
                     return types.Where(t => t.Namespace.EndsWith(@namespace)).ToList();
                 default:
                     throw new ArgumentOutOfRangeException();
