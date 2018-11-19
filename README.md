@@ -8,7 +8,7 @@ Allows you to automatically register services in the Asp.Net Core DI container. 
 ### Two registration modes are supported
 * registration of all founded services by class
 * registration of all founded services by interfaces and corresponding class
- 
+
 #### Registration by interfaces and class (default behavior)
 This code search for all classes in `Api.Services.Singleton` namespace and register its by executing `services.AddSingleton(IService, Service)` for all founded classes. And also search for all classes in `Api.Services` namespace and register its by executing `services.AddScoped(IService, Service)` for all founded classes.
 ```sh
@@ -36,7 +36,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 #### AutoRegistrationOptions
-Also, you can determine exactly how you should compare namespaces when searching for services by setting the `CompreType` property.
+Also, you can determine exactly how you should compare namespaces when searching for services by setting the `CompareType` property.
 It can have the following meanings:
 * Equal (Default)
 * Contain
@@ -50,7 +50,7 @@ public void ConfigureServices(IServiceCollection services)
 	services.AutoRegisterServices(options =>
 	{
 		options.Namespaces.Scoped = "Services";
-		options.Namespaces.CompreType = NamespaceCompreType.Contain;
+		options.Namespaces.CompareType = NamespaceCompareType.Contain;
 	});
 }
 ```

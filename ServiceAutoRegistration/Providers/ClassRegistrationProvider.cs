@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ServiceAutoRegistration.Providers
 {
-
     /// <summary>
     /// Register services by class.
     /// For example, if there is a UserService class in the scoped namespace,
